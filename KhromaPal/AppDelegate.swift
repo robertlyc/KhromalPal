@@ -29,13 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: NSDictionary?) -> Bool {
     // Override point for customization after application launch.
-    if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-      let splitViewController = window!.rootViewController as UISplitViewController
-      let navigationController = splitViewController.viewControllers.last as UINavigationController
-      let splitDelegate = navigationController.topViewController as UISplitViewControllerDelegate
-      splitViewController.delegate = splitDelegate
-    }
-    
+    let splitViewController = window!.rootViewController as UISplitViewController
+    let navigationController = splitViewController.viewControllers.last as UINavigationController
+    let splitDelegate = navigationController.topViewController as UISplitViewControllerDelegate
+    splitViewController.delegate = splitDelegate
+
     return true
   }
 }

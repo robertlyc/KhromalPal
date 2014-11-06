@@ -30,11 +30,7 @@ class MasterViewController: UITableViewController {
   
   override func awakeFromNib() {
     super.awakeFromNib()
-    if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-      self.clearsSelectionOnViewWillAppear = false
-      self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
-      title = "Palettes"
-    }
+    title = "Palettes"
   }
   
   override func viewDidLoad() {
@@ -83,9 +79,6 @@ class MasterViewController: UITableViewController {
       newTable.paletteCollection = childCollection
       newTable.title = childCollection.name
       navigationController?.pushViewController(newTable, animated: true)
-    } else if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-      let palette = paletteCollection.children[indexPath.row] as ColorPalette
-      detailViewController!.colorPalette = palette
     }
   }
   

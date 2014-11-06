@@ -11,8 +11,7 @@
 		2220645F1967336E00BD4FBC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2220645E1967336E00BD4FBC /* CoreGraphics.framework */; };
 		222064611967336E00BD4FBC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222064601967336E00BD4FBC /* UIKit.framework */; };
 		222064671967336E00BD4FBC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 222064651967336E00BD4FBC /* InfoPlist.strings */; };
-		222064701967336E00BD4FBC /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */; };
-		222064731967336E00BD4FBC /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222064711967336E00BD4FBC /* Main_iPad.storyboard */; };
+		222064731967336E00BD4FBC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 222064711967336E00BD4FBC /* Main.storyboard */; };
 		2220647B1967336E00BD4FBC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2220647A1967336E00BD4FBC /* Images.xcassets */; };
 		222064821967336E00BD4FBC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 222064811967336E00BD4FBC /* XCTest.framework */; };
 		222064831967336E00BD4FBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2220645C1967336E00BD4FBC /* Foundation.framework */; };
@@ -48,8 +47,7 @@
 		222064601967336E00BD4FBC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		222064641967336E00BD4FBC /* KhromaPal-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "KhromaPal-Info.plist"; sourceTree = "<group>"; };
 		222064661967336E00BD4FBC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2220646F1967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		222064721967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		222064721967336E00BD4FBC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2220647A1967336E00BD4FBC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		222064801967336E00BD4FBC /* KhromaPalTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KhromaPalTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		222064811967336E00BD4FBC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -131,8 +129,7 @@
 				22BE302819674A6F00772605 /* DataLayer */,
 				22B5FFB319C4908C000936D2 /* Protocols */,
 				22BE302919674A6F00772605 /* Extensions */,
-				2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */,
-				222064711967336E00BD4FBC /* Main_iPad.storyboard */,
+				222064711967336E00BD4FBC /* Main.storyboard */,
 				2220647A1967336E00BD4FBC /* Images.xcassets */,
 				222064631967336E00BD4FBC /* Supporting Files */,
 				22BE2FF2196734C300772605 /* AppDelegate.swift */,
@@ -283,10 +280,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				222064731967336E00BD4FBC /* Main_iPad.storyboard in Resources */,
+				222064731967336E00BD4FBC /* Main.storyboard in Resources */,
 				22BE30371967609100772605 /* DefaultColourSwatchCollection.plist in Resources */,
 				2220647B1967336E00BD4FBC /* Images.xcassets in Resources */,
-				222064701967336E00BD4FBC /* Main_iPhone.storyboard in Resources */,
 				22D21E3719C896030090A99A /* LaunchScreen.xib in Resources */,
 				222064671967336E00BD4FBC /* InfoPlist.strings in Resources */,
 			);
@@ -345,20 +341,12 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		2220646E1967336E00BD4FBC /* Main_iPhone.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				2220646F1967336E00BD4FBC /* Base */,
-			);
-			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		222064711967336E00BD4FBC /* Main_iPad.storyboard */ = {
+		222064711967336E00BD4FBC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				222064721967336E00BD4FBC /* Base */,
 			);
-			name = Main_iPad.storyboard;
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 		2220648A1967336E00BD4FBC /* InfoPlist.strings */ = {
