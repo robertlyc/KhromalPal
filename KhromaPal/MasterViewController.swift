@@ -87,7 +87,8 @@ class MasterViewController: UITableViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     if segue.identifier == "showDetail" {
       if let indexPath = self.tableView.indexPathForSelectedRow() {
-        let detailVC = segue.destinationViewController as DetailViewController
+        let detailNav = segue.destinationViewController as UINavigationController
+        let detailVC = detailNav.topViewController as DetailViewController
         let palette = paletteCollection.children[indexPath.row] as ColorPalette
         detailVC.colorPalette = palette
       }
