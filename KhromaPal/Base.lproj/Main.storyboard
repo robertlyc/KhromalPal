@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IWh-nS-UfB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Trait Override VC-->
@@ -34,7 +35,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4aV-XJ-ZFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-367" y="-936"/>
+            <point key="canvasLocation" x="-1221" y="134"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="pY4-Hu-kfo">
@@ -143,6 +144,37 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1139" y="609"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="oCF-0e-tnc">
+            <objects>
+                <viewController storyboardIdentifier="NoPaletteSelected" id="mXW-lt-1lK" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qqc-A3-pt9"/>
+                        <viewControllerLayoutGuide type="bottom" id="hur-gD-JDM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qqg-du-KpK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Palette Selected" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Onu-0g-6Aw">
+                                <rect key="frame" x="16" y="280.5" width="568" height="38"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="32"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="Onu-0g-6Aw" secondAttribute="centerY" id="E8h-2U-5Ul"/>
+                            <constraint firstItem="Onu-0g-6Aw" firstAttribute="leading" secondItem="qqg-du-KpK" secondAttribute="leadingMargin" id="ajD-Gs-bfF"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Onu-0g-6Aw" secondAttribute="trailing" id="zwu-je-mdC"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W0t-nE-P0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-821" y="-677"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
