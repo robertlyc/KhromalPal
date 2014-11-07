@@ -1,9 +1,41 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="IWh-nS-UfB">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
+        <!--Trait Override VC-->
+        <scene sceneID="7Nx-Ki-4RG">
+            <objects>
+                <viewController title="Trait Override VC" id="IWh-nS-UfB" customClass="TraitOverrideViewController" customModule="KhromaPal" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VHg-Sc-KlF"/>
+                        <viewControllerLayoutGuide type="bottom" id="TB6-aB-ZYV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hQv-uZ-fCq">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWa-jG-ZJt">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="H1p-Uh-vWS" kind="embed" id="Vrt-RK-P2N"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gWa-jG-ZJt" firstAttribute="top" secondItem="hQv-uZ-fCq" secondAttribute="top" id="Rmt-j8-LIs"/>
+                            <constraint firstAttribute="trailing" secondItem="gWa-jG-ZJt" secondAttribute="trailing" id="gqg-3e-wxs"/>
+                            <constraint firstItem="gWa-jG-ZJt" firstAttribute="leading" secondItem="hQv-uZ-fCq" secondAttribute="leading" id="hpj-Vs-X6w"/>
+                            <constraint firstItem="TB6-aB-ZYV" firstAttribute="top" secondItem="gWa-jG-ZJt" secondAttribute="bottom" id="rEC-pw-J4Q"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4aV-XJ-ZFa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-367" y="-936"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="pY4-Hu-kfo">
             <objects>
@@ -115,7 +147,7 @@
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                <splitViewController id="H1p-Uh-vWS" customClass="SplitViewController" customModule="KhromaPal" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <connections>
@@ -187,6 +219,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="dav-ML-nCO"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>
