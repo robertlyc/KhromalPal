@@ -19,6 +19,16 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
     return true
   }
   
+  func splitViewController(splitViewController: UISplitViewController, separateSecondaryViewControllerFromPrimaryViewController primaryViewController: UIViewController!) -> UIViewController? {
+    if let paletteDisplayCont = primaryViewController as? PaletteDisplayContainer {
+      if paletteDisplayCont.rwt_currentlyDisplayPalette() != nil {
+        return nil
+      }
+    }
+    let vc = storyboard?.instantiateViewControllerWithIdentifier("NoPaletteSelected") as UIViewController
+    return NavigationController(rootViewController: vc)
+  }
+  
   override func didReceiveMemoryWarning() {
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.

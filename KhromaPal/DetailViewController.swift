@@ -22,7 +22,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, PaletteDisplayContainer {
 
   @IBOutlet weak var titleLabel: UILabel!
   @IBOutlet var colorLabels: [UILabel]!
@@ -39,6 +39,10 @@ class DetailViewController: UIViewController {
       self.masterPopoverController!.dismissPopoverAnimated(true)
     }
   }
+  }
+  
+  func rwt_currentlyDisplayPalette() -> ColorPalette? {
+    return colorPalette
   }
   
   private func configureView() {
