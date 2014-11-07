@@ -22,7 +22,7 @@
 
 import UIKit
 
-class MasterViewController: UITableViewController {
+class MasterViewController: UITableViewController, PaletteSelectionContainer {
   
   var detailViewController: DetailViewController? = nil
   var paletteCollection: ColorPaletteCollection = ColorPaletterProvider().rootCollection!
@@ -100,6 +100,17 @@ class MasterViewController: UITableViewController {
       return !rowHasChildrenAtIndex(selectedIndexPath)
     }
     return false
+  }
+  
+  // #pragma mark - PaletteSelectionContainer
+  func rwt_currentlySelectedPalette() -> ColorPalette? {
+    let selectedIndex = tableView.indexPathForSelectedRow()
+    if let indexPath = selectedIndex {
+      if !rowHasChildrenAtIndex(indexPath) {
+        return paletteCollection.children[indexPath.row] as? ColorPalette
+      }
+    }
+    return nil
   }
   
   

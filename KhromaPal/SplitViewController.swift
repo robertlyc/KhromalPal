@@ -16,6 +16,15 @@ class SplitViewController: UISplitViewController, UISplitViewControllerDelegate 
   }
   
   func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
+    if let selectedCont = primaryViewController as? PaletteSelectionContainer {
+      if let displayCont = secondaryViewController as? PaletteSelectionContainer {
+        let selectedPalette = selectedCont.rwt_currentlySelectedPalette()
+        let displayPalette = displayCont.rwt_currentlySelectedPalette()
+        if selectedPalette? != nil && selectedPalette == displayPalette {
+          return false
+        }
+      }
+    }
     return true
   }
   
