@@ -6,19 +6,18 @@
 //  Copyright (c) 2014年 RayWenderlich. All rights reserved.
 //
 
-import Foundation
-
 extension UIViewController {
   func rwt_showVCWillResultInPush(sender: AnyObject?) -> Bool {
-    if let target = targetViewControllerForAction("rwt_showVCWillResultInPush", sender: sender) {
+    if let target = targetViewControllerForAction("rwt_showVCWillResultInPush:", sender: sender) {
       return target.rwt_showVCWillResultInPush(sender)
     } else {
       return false
     }
   }
+
   
   func rwt_showDetailVCWillResultInPush(sender: AnyObject?) -> Bool {
-    if let target = targetViewControllerForAction("rwt_showDetailVCWillResultInPush", sender: sender) {
+    if let target = targetViewControllerForAction("rwt_showDetailVCWillResultInPush:", sender: sender) {
       return target.rwt_showDetailVCWillResultInPush(sender)
     } else {
       return false
@@ -44,6 +43,10 @@ extension UISplitViewController {
     }
   }
 }
+
+
+
+
 
 
 
