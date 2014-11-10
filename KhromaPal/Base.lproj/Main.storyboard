@@ -145,10 +145,10 @@
             </objects>
             <point key="canvasLocation" x="1139" y="609"/>
         </scene>
-        <!--View Controller-->
+        <!--No Palette Selected View Controller-->
         <scene sceneID="oCF-0e-tnc">
             <objects>
-                <viewController storyboardIdentifier="NoPaletteSelected" id="mXW-lt-1lK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="NoPaletteSelected" id="mXW-lt-1lK" customClass="NoPaletteSelectedViewController" customModule="KhromaPal" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qqc-A3-pt9"/>
                         <viewControllerLayoutGuide type="bottom" id="hur-gD-JDM"/>
@@ -251,6 +251,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Tll-UG-LXB"/>
+        <segue reference="dav-ML-nCO"/>
     </inferredMetricsTieBreakers>
 </document>

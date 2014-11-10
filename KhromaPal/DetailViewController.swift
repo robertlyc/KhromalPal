@@ -80,6 +80,17 @@ class DetailViewController: UIViewController, PaletteDisplayContainer {
     self.configureView()
   }
   
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    if let svc = splitViewController {
+      if !svc.collapsed {
+        navigationItem.setLeftBarButtonItem(svc.displayModeButtonItem(), animated: true)
+        navigationItem.leftItemsSupplementBackButton = true
+        navigationItem.hidesBackButton = false
+      }
+    }
+  }
+  
   // Private methods
   private func makeAllContentHidden(hidden: Bool) {
     for subview in view.subviews as [UIView] {
